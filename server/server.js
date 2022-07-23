@@ -14,11 +14,13 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 let waitingPlayer = null;
+let game = new FightingGame();
 
 io.on("connection", (sock) => {
   // start the game
   if (waitingPlayer) {
-    new FightingGame(waitingPlayer, sock);
+    game.setPlayers(waitingPlayer, sock);
+    game.start();
     waitingPlayer = null;
   } else {
     waitingPlayer = sock;
@@ -28,8 +30,9 @@ io.on("connection", (sock) => {
   sock.on("message", (text) => {
     io.emit("message", text);
   });
+
   sock.on("action", (action) => {
-    io.emit("action", action);
+    if (game.isValidAction(action, sock)) io.emit("action", action);
   });
 });
 
