@@ -5,6 +5,8 @@ There is also no going off the map anymore, the the jumping is limited to double
 
 The main idea of this project is the implementation of the multiplayer version of the game through socket.io.
 
+When you first download the project, open cmd, navigate to the server folder and run npm install (make sure that you have Node.js installed).
+
 To run the multiplayer version of the game locally, navigate to the server folder and run the run-server.bat file. Open two instances of your browser of choice and go to localhost:8080 and you're ready to go.
 
 To run the online multiplayer version of the game, just run the start.bat file from the root project folder. Two cmd instances will be minimized, open the second one and from there copy the link of the http forwarding tunnel (like in the screenshot below), send it to your friend and you're ready to play.
