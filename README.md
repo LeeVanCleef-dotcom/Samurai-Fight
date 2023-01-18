@@ -1,4 +1,4 @@
-# fightingGameMultiplayer
+# Samurai Fight (Online/Multiplayer)
  
 Idea was taken from https://github.com/chriscourses/fighting-game (https://www.youtube.com/watch?v=vyqbNFMDRGQ), but the implementation differs quite. 
 There is also no going off the map anymore, the the jumping is limited to double jump at most, attack box positions are fixed so that it's fair for both players and the game itself is not time based, but first to win. 
